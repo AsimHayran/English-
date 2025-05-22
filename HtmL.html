@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literary Analysis Guide</title>
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --bg-darker: #0a0a0a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #aaaaaa;
+            --accent-color: #6a5acd;
+            --accent-hover: #7b68ee;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--bg-darker);
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            background-color: var(--bg-darker);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .analysis-card {
+            background-color: rgba(58, 58, 58, 0.3);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .devices-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .device-card {
+            background-color: var(--bg-darker);
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .device-card h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        .quote {
+            font-style: italic;
+            color: var(--accent-color);
+            background-color: rgba(106, 90, 205, 0.1);
+            padding: 0.5rem 1rem;
+            border-left: 3px solid var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        .connective {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--bg-darker);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .toggle-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+        }
+
+        .toggle-btn {
+            background-color: var(--bg-darker);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Light theme styles */
+        body.light-theme {
+            --bg-dark: #f5f5f5;
+            --bg-darker: #e0e0e0;
+            --text-primary: #333333;
+            --text-secondary: #555555;
+            --accent-color: #5d4b99;
+            --accent-hover: #6a5acd;
+            --border-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <button class="toggle-btn" id="themeToggle">Toggle Light Mode</button>
+    </div>
+
+    <header>
+        <h1>Literary Analysis Guide</h1>
+    </header>
+
+    <div class="container">
+        <section id="language-analysis">
+            <h2>Questions 2</h2>
+            
+            <div class="analysis-card">
+                <h3>Analysis Example 1</h3>
+                <p>The writer uses <strong>[literary device]</strong> to <strong>[achieve specific effect]</strong>. For example, the phrase <span class="quote">"[relevant quotation]"</span> includes <strong>[specific technique]</strong>. This suggests <strong>[interpretation of effect]</strong>, which makes the reader feel <strong>[emotional response]</strong>. The word <strong>"[key word]"</strong> is particularly effective because it connotes <strong>[associated ideas]</strong>. Overall, the language helps to <strong>[contribution to text's purpose]</strong>.</p>
+                
+                <p class="connective">Similarly,However...</p>
+                
+                <p>The writer uses <strong>[alternative device]</strong> to <strong>[different effect]</strong>. For example, the phrase <span class="quote">"[second quotation]"</span> includes <strong>[specific technique]</strong>. This suggests <strong>[alternative interpretation]</strong>, which makes the reader feel <strong>[different response]</strong>. The word <strong>"[second key word]"</strong> is particularly effective because it connotes <strong>[different associations]</strong>. Overall, the language helps to <strong>[alternative contribution]</strong>.</p>
+            </div>
+        </section>
+
+        <section id="structure-analysis">
+            <h2>Structure Analysis</h2>
+            
+            <div class="analysis-card">
+                <h3>Questions 3</h3>
+                <p>The writer structures the extract to gradually build <strong>[mood/effect]</strong>. At the beginning, the focus is on <strong>[initial focus]</strong>, using <strong>[descriptive technique]</strong>. This immediately engages the reader by <strong>[initial effect]</strong>. The focus then shifts to <strong>[new focus]</strong>. This shift increases <strong>[developing effect]</strong> and draws the reader in further. The ending is particularly effective, as <strong>[climactic moment]</strong>, which leaves the reader feeling <strong>[final response]</strong>. These structural choices guide the reader through the text and build a sense of <strong>[overall impression]</strong>.</p>
+                
+                <h3>Questions-3</h3>
+                <p>The writer structures the extract to create <strong>[primary effect]</strong>. At the beginning, the focus is on <strong>[opening situation]</strong>, using <strong>[initial technique]</strong>. This immediately engages the reader by <strong>[engagement method]</strong>. The focus then shifts to <strong>[developing situation]</strong>. This shift increases <strong>[intensified effect]</strong> and draws the reader in further. The ending is particularly effective, as <strong>[concluding moment]</strong>, which leaves the reader feeling <strong>[lasting impression]</strong>. These structural choices guide the reader through the text and build a sense of <strong>[cumulative effect]</strong>.</p>
+            </div>
+        </section>
+
+        <section id="evaluation">
+            <h2>Evaluation</h2>
+            
+            <div class="analysis-card">
+                <h3>Questions 4</h3>
+                <p>I strongly agree that the writer makes this part <strong>[key quality]</strong>. One way this is shown is through the use of <strong>[device]</strong> in the line <span class="quote">"[supporting quotation]"</span>. This effectively conveys <strong>[specific effect]</strong> and makes the reader feel <strong>[emotional response]</strong>. The writer also builds this effect through structure – for example, <strong>[structural technique]</strong>, which increases the impact. The use of <strong>[additional device]</strong> reinforces this atmosphere. Overall, the writer successfully <strong>[achievement]</strong> and leaves the reader feeling <strong>[final impression]</strong>.</p>
+                
+                <p>Furthermore, the writer makes this section <strong>[different quality]</strong>. One way this is shown is through the use of <strong>[alternative device]</strong> in the line <span class="quote">"[second quotation]"</span>. This effectively conveys <strong>[alternative effect]</strong> and makes the reader feel <strong>[different response]</strong>. The writer also builds this effect through structure – for example, <strong>[structural method]</strong>, which increases the impact. The use of <strong>[reinforcing technique]</strong> strengthens this atmosphere. Overall, the writer successfully <strong>[alternative achievement]</strong> and leaves the reader feeling <strong>[lasting effect]</strong>.</p>
+                
+                <p>Additionally, the writer makes this passage <strong>[third quality]</strong>. One way this is shown is through the use of <strong>[third device]</strong> in the line <span class="quote">"[third quotation]"</span>. This effectively conveys <strong>[third effect]</strong> and makes the reader feel <strong>[developed response]</strong>. The writer also builds this effect through structure – for example, <strong>[structural approach]</strong>, which increases the impact. The use of <strong>[complementary technique]</strong> enhances this atmosphere. Overall, the writer successfully <strong>[final achievement]</strong> and leaves the reader feeling <strong>[resonating impression]</strong>.</p>
+            </div>
+        </section>
+
+        <section id="language-devices">
+            <h2>Language Devices</h2>
+            <div class="devices-container">
+                <div class="device-card">
+                    <h3>Metaphor</h3>
+                    <p>Direct comparison (no "like" or "as")</p>
+                </div>
+                <div class="device-card">
+                    <h3>Simile</h3>
+                    <p>Comparison using "like" or "as"</p>
+                </div>
+                <div class="device-card">
+                    <h3>Personification</h3>
+                    <p>Giving human traits to non-human things</p>
+                </div>
+                <div class="device-card">
+                    <h3>Alliteration</h3>
+                    <p>Repetition of the same starting consonant</p>
+                </div>
+                <div class="device-card">
+                    <h3>Sibilance</h3>
+                    <p>Repetition of "s" or "sh" sounds for effect</p>
+                </div>
+                <div class="device-card">
+                    <h3>Juxtaposition</h3>
+                    <p>Placing two contrasting ideas side-by-side</p>
+                </div>
+                <div class="device-card">
+                    <h3>Oxymoron</h3>
+                    <p>Two contradictory words together</p>
+                </div>
+                <div class="device-card">
+                    <h3>Hyperbole</h3>
+                    <p>Exaggeration for emphasis</p>
+                </div>
+                <div class="device-card">
+                    <h3>Onomatopoeia</h3>
+                    <p>Words that imitate sound</p>
+                </div>
+                <div class="device-card">
+                    <h3>Triplet</h3>
+                    <p>Three ideas listed for impact</p>
+                </div>
+                <div class="device-card">
+                    <h3>Emotive Language</h3>
+                    <p>Words that stir strong feelings</p>
+                </div>
+                <div class="device-card">
+                    <h3>Pathetic Fallacy</h3>
+                    <p>Nature mirroring mood or events</p>
+                </div>
+                <div class="device-card">
+                    <h3>Irony</h3>
+                    <p>Saying the opposite of what is meant, or when the outcome is the opposite of what's expected</p>
+                </div>
+                <div class="device-card">
+                    <h3>Symbolism</h3>
+                    <p>A thing representing something else</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="structural-devices">
+            <h2>Structural Devices</h2>
+            <div class="devices-container">
+                <div class="device-card">
+                    <h3>Repetition</h3>
+                    <p>Repeating words</p>
+                </div>
+                <div class="device-card">
+                    <h3>Flashback / Flashforward</h3>
+                    <p>Interrupting the chronological order to show past/future events</p>
+                </div>
+                <div class="device-card">
+                    <h3>Foreshadowing</h3>
+                    <p>Hints about what's to come</p>
+                </div>
+                <div class="device-card">
+                    <h3>Zoom In / Zoom Out</h3>
+                    <p>Changes in focus — from macro to micro (or reverse)</p>
+                </div>
+                <div class="device-card">
+                    <h3>Circular Structure</h3>
+                    <p>Text begins and ends in the same or similar way</p>
+                </div>
+                <div class="device-card">
+                    <h3>Shift</h3>
+                    <p>Sudden change in tone, mood, or direction</p>
+                </div>
+                <div class="device-card">
+                    <h3>Withholding Information</h3>
+                    <p>Not telling the reader everything — builds mystery or suspense</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Literary Analysis Guide &copy; 2023</p>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            
+            if (document.body.classList.contains('light-theme')) {
+                themeToggle.textContent = 'Toggle Dark Mode';
+            } else {
+                themeToggle.textContent = 'Toggle Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>
