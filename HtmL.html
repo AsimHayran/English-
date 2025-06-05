@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,104 +11,85 @@
             --bg-darker: #0a0a0a;
             --text-primary: #e0e0e0;
             --text-secondary: #a0a0a0;
-            --accent: #6a5acd;
-            --accent-light: #9370db;
-            --accent-red: #ff6b6b;
+            --accent: #6a5acd; /* SlateBlue */
+            --accent-light: #9370db; /* MediumPurple */
+            --accent-red: #ff6b6b; /* For Q5 warnings */
             --border: #333;
         }
         
-        * {
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             background-color: var(--bg-dark);
             color: var(--text-primary);
             margin: 0;
             padding: 0;
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
         }
         
         header {
             background-color: var(--bg-darker);
-            padding: 1rem;
+            padding: 1.5rem;
             text-align: center;
             border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
         
         h1 {
             margin: 0;
             color: var(--accent-light);
-            font-size: 1.5rem;
-            padding: 0.5rem 0;
+            font-size: 2.2rem;
         }
         
         .subtitle {
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 1.1rem;
         }
         
         .container {
-            width: 100%;
-            padding: 0 1rem;
-            margin: 0 auto;
-            max-width: 100%;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
         }
         
         section {
             background-color: var(--bg-darker);
             border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
             border: 1px solid var(--border);
-            overflow-wrap: break-word;
         }
         
         h2 {
             color: var(--accent);
             margin-top: 0;
-            font-size: 1.3rem;
             border-bottom: 1px solid var(--border);
             padding-bottom: 0.5rem;
         }
         
         h3 {
             color: var(--accent-light);
-            font-size: 1.1rem;
-            margin: 1rem 0 0.5rem;
         }
         
         .structure {
             background-color: rgba(106, 90, 205, 0.1);
             border-left: 4px solid var(--accent);
-            padding: 0.8rem;
+            padding: 1rem;
             margin: 1rem 0;
             border-radius: 0 4px 4px 0;
-            font-size: 0.9rem;
         }
         
         .template {
             background-color: rgba(255, 255, 255, 0.05);
-            padding: 0.8rem;
+            padding: 1rem;
             border-radius: 6px;
             font-family: 'Courier New', monospace;
             white-space: pre-line;
             line-height: 1.5;
-            font-size: 0.9rem;
-            overflow-x: auto;
         }
         
         .connective {
             color: var(--accent-light);
             font-style: italic;
             margin: 0.5rem 0;
-            display: block;
         }
         
         .quote {
@@ -123,6 +105,10 @@
             color: #a1ffa1;
         }
         
+        .link {
+            color: #7fdbff;
+        }
+        
         .warning {
             color: var(--accent-red);
             font-weight: bold;
@@ -134,98 +120,149 @@
         
         footer {
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
             color: var(--text-secondary);
             border-top: 1px solid var(--border);
-            font-size: 0.8rem;
         }
         
-        /* Letter specific styles */
+        /* New Q5 specific styles */
         .letter-part {
             margin: 1rem 0;
-            padding-left: 0.8rem;
+            padding-left: 1rem;
             border-left: 2px solid var(--accent-light);
         }
         
         .signature {
             font-family: 'Brush Script MT', cursive;
             color: var(--accent-light);
-            font-size: 1.1rem;
-        }
-        
-        /* Mobile optimizations */
-        ul, ol {
-            padding-left: 1.2rem;
-            margin: 0.5rem 0;
-        }
-        
-        li {
-            margin-bottom: 0.3rem;
-        }
-        
-        /* Navigation for mobile */
-        .nav-button {
-            display: block;
-            background: var(--accent);
-            color: white;
-            text-align: center;
-            padding: 0.8rem;
-            margin: 0.5rem 0;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        /* Responsive adjustments */
-        @media (min-width: 768px) {
-            body {
-                font-size: 18px;
-            }
-            
-            .container {
-                max-width: 900px;
-                padding: 0 1.5rem;
-            }
-            
-            section {
-                padding: 1.5rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>English Language Analysis Guide</h1>
-        <div class="subtitle">Structures for Q2, Q3, Q4 & Letter Writing (Q5)</div>
+        <div class="subtitle">Structures for Q2, Q3, Q4 & Letter Writing  </div>
     </header>
     
     <div class="container">
-        <!-- Navigation buttons for mobile -->
-        <a href="#q2" class="nav-button">Q2: Compare Ideas</a>
-        <a href="#q3" class="nav-button">Q3: Language Analysis</a>
-        <a href="#q4" class="nav-button">Q4: Compare Perspectives</a>
-        <a href="#q5" class="nav-button">Q5: Letter Writing</a>
-        
-        <!-- Existing content sections -->
-        <section id="q2">
             <h2>✅ Q2: Compare Ideas/Experiences</h2>
-            <!-- ... (previous Q2 content) ... -->
+            <p><em>No language analysis – focus on content and perspectives</em></p>
+            
+            <div class="structure">
+                <strong>Structure:</strong><br>
+                P (Focus) → BP (Text B's View) → AP (Text A's View)<br>
+                → A-E-L (x3) → Connective → B-E-L (x3)
+            </div>
+            
+            <h3>Template:</h3>
+            <div class="template">
+<b>P:</b> The two texts show different [e.g., experiences of city life].
+<b>BP:</b> Text B presents it as [Text B's overall view].
+<b>AP:</b> However, Text A presents a different view, where the writer...
+
+<b>A-E-L 1:</b> In Text A, the writer says, <span class="quote">"QUOTE A1"</span>. This suggests... (Explain). Links to the question because...
+<b>A-E-L 2:</b> Another quote, <span class="quote">"QUOTE A2"</span>, shows... (Explain). Links because...
+<b>A-E-L 3:</b> The quote <span class="quote">"QUOTE A3"</span> implies... (Explain). Connects to the focus because...
+
+<span class="connective">Connective:</span> In contrast / On the other hand / Meanwhile
+
+<b>B-E-L 1:</b> In Text B, the writer says, <span class="quote">"QUOTE B1"</span>. This shows... (Explain). Links because...
+<b>B-E-L 2:</b> Another example is <span class="quote">"QUOTE B2"</span>, which implies... (Explain). Supports the idea that...
+<b>B-E-L 3:</b> Finally, <span class="quote">"QUOTE B3"</span> reveals... (Explain). Links back to the question because...
+            </div>
         </section>
         
         <section id="q3">
             <h2>✅ Q3: Language Analysis</h2>
-            <!-- ... (previous Q3 content) ... -->
+            <p><em>Analyze how writers create effects</em></p>
+            
+            <div class="structure">
+                <strong>Structure:</strong><br>
+                AP → R-T-E-Z-E-L (x3 paragraphs)
+            </div>
+            
+            <h3>Template:</h3>
+            <div class="template">
+<b>AP:</b> The writer presents [feeling/mood/atmosphere] in the text.
+
+<b>Paragraph 1:</b>
+- <b>R:</b> <span class="quote">"QUOTE 1"</span>
+- <b>T:</b> Uses <span class="technique">[technique]</span>
+- <b>E:</b> Creates <span class="effect">[effect]</span>
+- <b>Z:</b> Zooming in on <span class="quote">"WORD"</span> reveals...
+- <b>E:</b> Strengthens the message by...
+- <b>L:</b> Links to the question because...
+
+<span class="connective">Connective:</span> Furthermore / Additionally
+
+<b>Paragraph 2:</b>
+- <b>R:</b> <span class="quote">"QUOTE 2"</span>
+- <b>T:</b> Uses <span class="technique">[technique]</span>
+- <b>E:</b> Suggests...
+- <b>Z:</b> The phrase <span class="quote">"___"</span> emphasises...
+- <b>E:</b> Gives the impression that...
+- <b>L:</b> Connects to the focus as it shows...
+
+<span class="connective">Connective:</span> Finally / Moreover
+
+<b>Paragraph 3:</b>
+- <b>R:</b> <span class="quote">"QUOTE 3"</span>
+- <b>T:</b> <span class="technique">[Technique]</span> is used
+- <b>E:</b> The effect is...
+- <b>Z:</b> The word <span class="quote">"___"</span> is powerful because...
+- <b>E:</b> Helps the reader understand...
+- <b>L:</b> Relates to the question because...
+            </div>
         </section>
         
         <section id="q4">
             <h2>✅ Q4: Compare Perspectives/Attitudes</h2>
-            <!-- ... (previous Q4 content) ... -->
+            <p><em>Compare writers' viewpoints and techniques</em></p>
+            
+            <div class="structure">
+                <strong>Structure:</strong><br>
+                AP-R-T-E → PB-R-T-E → Connective (Repeat x3)
+            </div>
+            
+            <h3>Template:</h3>
+            <div class="template">
+<b>Paragraph 1:</b>
+- <b>AP:</b> In Text A, the writer presents [attitude/idea].
+- <b>R:</b> <span class="quote">"QUOTE A1"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Suggests...
+- <b>PB:</b> In Text B, the writer shows a [similar/different] idea.
+- <b>R:</b> <span class="quote">"QUOTE B1"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Implies...
+
+<span class="connective">Connective:</span> However / Whereas
+
+<b>Paragraph 2:</b>
+- <b>AP:</b> Text A also presents [idea].
+- <b>R:</b> <span class="quote">"QUOTE A2"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Shows...
+- <b>PB:</b> In contrast, Text B says...
+- <b>R:</b> <span class="quote">"QUOTE B2"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Gives the impression that...
+
+<span class="connective">Connective:</span> Similarly / In addition
+
+<b>Paragraph 3:</b>
+- <b>AP:</b> Another attitude in Text A is...
+- <b>R:</b> <span class="quote">"QUOTE A3"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Highlights...
+- <b>PB:</b> Meanwhile, Text B shows...
+- <b>R:</b> <span class="quote">"QUOTE B3"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Shows that...
+            </div>
         </section>
-        
+    </div>
         <section id="q5">
             <h2>✅ Q5: Formal Letter Writing</h2>
             <p><em>Structure and templates for persuasive letters</em></p>
@@ -249,34 +286,38 @@
             <div class="template">
 <b>Dear [Title + Surname],</b>
 
-I am writing to express my strong [support/opposition] regarding [insert topic]. As a young person affected by this issue, I believe it is vital that voices like mine are heard. This decision will impact both today's society and our future.
+I am writing to express my strong [support/opposition] regarding [insert topic, e.g. the plan to introduce AI surveillance in public areas]. As a young person who is deeply affected by this issue, I believe it is vital that voices like mine are taken seriously. Decisions like this will impact not just today's society, but the future we are all heading into — and I refuse to remain silent.
 
-This matter already shapes how we think and live. I urge you to [support/stop/change] this proposal before it causes lasting damage.
+Whether you realise it or not, this matter is already shaping the way we think, feel, and live. For this reason, I am urging you to [support/stop/change] this proposal before it causes lasting damage.
             </div>
             
             <h3>🔥 Closing Paragraph Template</h3>
             <div class="template">
-In conclusion, please consider this decision's real impact. This isn't just political — it's personal. For a fair, safe future, the right choices must be made today.
+In conclusion, I hope you reflect on the real impact this decision will have on people like me. This is not just a political debate — it's personal. If we want to move forward as a society that values fairness, safety, and the future, then the right choices must be made today.
 
-I respectfully ask you to reconsider [topic] and take young voices seriously. We want a future worth believing in.
+I respectfully ask that you reconsider your position on [insert topic], and take the voices of young people seriously. We are not asking for favours — just for a future worth believing in.
 
 <b>Yours sincerely,</b>
-<span class="signature">[Your Name]</span>
+<span class="signature">[Your Name Here]</span>
             </div>
             
-            <h3 class="warning">⚠️ Style Tips:</h3>
+            <h3 class="warning">⚠️ Extra Style Tips:</h3>
             <div class="template">
-- Use "you"/"your" for direct address
-- Formal but passionate tone
-- Rhetorical questions & triples
-- PEEL/PEAL paragraphs
-- Show audience/purpose awareness
+- Use <b>direct address</b> ("you", "your")
+- Keep the tone <b>formal but passionate</b>
+- Use <b>rhetorical questions</b>, <b>triples</b>, and <b>strong verbs</b>
+- Paragraphs should be structured like PEEL or PEAL
+- Show awareness of <b>audience</b> (the person in power) and <b>purpose</b> (to persuade)
             </div>
         </section>
     </div>
     
     <footer>
-        &copy; 2023 English Language Analysis Guide | Mobile Optimized
+        &copy; 2023 English Language Analysis Guide | Dark Theme
+    </footer>
+    
+    <footer>
+        &copy; 2023 English Language Analysis Guide | Dark Theme
     </footer>
 </body>
 </html>
