@@ -3,302 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Analysis Guide</title>
+    <title>English Language Analysis Guide</title>
     <style>
         :root {
             --bg-dark: #121212;
             --bg-darker: #0a0a0a;
             --text-primary: #e0e0e0;
-            --text-secondary: #aaaaaa;
-            --accent-color: #6a5acd;
-            --accent-hover: #7b68ee;
-            --border-color: #333333;
+            --text-secondary: #a0a0a0;
+            --accent: #6a5acd; /* SlateBlue */
+            --accent-light: #9370db; /* MediumPurple */
+            --accent-red: #ff6b6b; /* For Q5 warnings */
+            --border: #333;
         }
-
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             background-color: var(--bg-dark);
             color: var(--text-primary);
-            line-height: 1.6;
             margin: 0;
             padding: 0;
         }
-
+        
         header {
             background-color: var(--bg-darker);
             padding: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
             text-align: center;
+            border-bottom: 1px solid var(--border);
         }
-
+        
         h1 {
             margin: 0;
-            color: var(--accent-color);
+            color: var(--accent-light);
+            font-size: 2.2rem;
         }
-
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
         }
-
+        
         section {
-            margin-bottom: 3rem;
             background-color: var(--bg-darker);
-            padding: 1.5rem;
             border-radius: 8px;
-            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
         }
-
+        
         h2 {
-            color: var(--accent-color);
-            border-bottom: 1px solid var(--border-color);
+            color: var(--accent);
+            margin-top: 0;
+            border-bottom: 1px solid var(--border);
             padding-bottom: 0.5rem;
         }
-
-        .analysis-card {
-            background-color: rgba(58, 58, 58, 0.3);
-            padding: 1.5rem;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--accent-color);
+        
+        h3 {
+            color: var(--accent-light);
         }
-
-        .devices-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+        
+        .structure {
+            background-color: rgba(106, 90, 205, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
         }
-
-        .device-card {
-            background-color: var(--bg-darker);
+        
+        .template {
+            background-color: rgba(255, 255, 255, 0.05);
             padding: 1rem;
             border-radius: 6px;
-            border: 1px solid var(--border-color);
+            font-family: 'Courier New', monospace;
+            white-space: pre-line;
+            line-height: 1.5;
         }
-
-        .device-card h3 {
-            color: var(--accent-color);
-            margin-top: 0;
-        }
-
-        .quote {
-            font-style: italic;
-            color: var(--accent-color);
-            background-color: rgba(106, 90, 205, 0.1);
-            padding: 0.5rem 1rem;
-            border-left: 3px solid var(--accent-color);
-            margin: 1rem 0;
-        }
-
+        
         .connective {
-            font-weight: bold;
-            color: var(--accent-color);
+            color: var(--accent-light);
+            font-style: italic;
+            margin: 0.5rem 0;
         }
-
+        
+        .quote {
+            color: #7fdbff;
+            font-style: italic;
+        }
+        
+        .technique {
+            color: #ff9e64;
+        }
+        
+        .effect {
+            color: #a1ffa1;
+        }
+        
+        .link {
+            color: #7fdbff;
+        }
+        
+        .warning {
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+        
+        .emoji {
+            font-style: normal;
+        }
+        
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: var(--bg-darker);
-            border-top: 1px solid var(--border-color);
+            padding: 1.5rem;
             color: var(--text-secondary);
+            border-top: 1px solid var(--border);
         }
-
-        .toggle-container {
-            display: flex;
-            justify-content: flex-end;
-            padding: 1rem;
+        
+        /* New Q5 specific styles */
+        .letter-part {
+            margin: 1rem 0;
+            padding-left: 1rem;
+            border-left: 2px solid var(--accent-light);
         }
-
-        .toggle-btn {
-            background-color: var(--bg-darker);
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .toggle-btn:hover {
-            background-color: var(--accent-color);
-        }
-
-        /* Light theme styles */
-        body.light-theme {
-            --bg-dark: #f5f5f5;
-            --bg-darker: #e0e0e0;
-            --text-primary: #333333;
-            --text-secondary: #555555;
-            --accent-color: #5d4b99;
-            --accent-hover: #6a5acd;
-            --border-color: #cccccc;
+        
+        .signature {
+            font-family: 'Brush Script MT', cursive;
+            color: var(--accent-light);
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
-    <div class="toggle-container">
-        <button class="toggle-btn" id="themeToggle">Toggle Light Mode</button>
-    </div>
-
     <header>
-        <h1>English Analysis Guide</h1>
+        <h1>English Language Analysis Guide</h1>
+        <div class="subtitle">Structures for Q2, Q3, Q4 & Letter Writing (Q5)</div>
     </header>
-
+    
     <div class="container">
-        <section id="language-analysis">
-            <h2>Questions 2</h2>
+            <h2>✅ Q2: Compare Ideas/Experiences</h2>
+            <p><em>No language analysis – focus on content and perspectives</em></p>
             
-            <div class="analysis-card">
-                <h3>Analysis Example 1</h3>
-                <p>The writer uses <strong>[literary device]</strong> to <strong>[achieve specific effect]</strong>. For example, the phrase <span class="quote">"[relevant quotation]"</span> includes <strong>[specific technique]</strong>. This suggests <strong>[interpretation of effect]</strong>, which makes the reader feel <strong>[emotional response]</strong>. The word <strong>"[key word]"</strong> is particularly effective because it connotes <strong>[associated ideas]</strong>. Overall, the language helps to <strong>[contribution to text's purpose]</strong>.</p>
-                
-                <p class="connective">Similarly,However...</p>
-                
-                <p>The writer uses <strong>[alternative device]</strong> to <strong>[different effect]</strong>. For example, the phrase <span class="quote">"[second quotation]"</span> includes <strong>[specific technique]</strong>. This suggests <strong>[alternative interpretation]</strong>, which makes the reader feel <strong>[different response]</strong>. The word <strong>"[second key word]"</strong> is particularly effective because it connotes <strong>[different associations]</strong>. Overall, the language helps to <strong>[alternative contribution]</strong>.</p>
+            <div class="structure">
+                <strong>Structure:</strong><br>
+                P (Focus) → BP (Text B's View) → AP (Text A's View)<br>
+                → A-E-L (x3) → Connective → B-E-L (x3)
             </div>
-        </section>
-
-        <section id="structure-analysis">
-            <h2>Structure Analysis</h2>
             
-            <div class="analysis-card">
-                <h3>Questions 3</h3>
-                <p>The writer structures the extract to gradually build <strong>[mood/effect]</strong>. At the beginning, the focus is on <strong>[initial focus]</strong>, using <strong>[descriptive technique]</strong>. This immediately engages the reader by <strong>[initial effect]</strong>. The focus then shifts to <strong>[new focus]</strong>. This shift increases <strong>[developing effect]</strong> and draws the reader in further. The ending is particularly effective, as <strong>[climactic moment]</strong>, which leaves the reader feeling <strong>[final response]</strong>. These structural choices guide the reader through the text and build a sense of <strong>[overall impression]</strong>.</p>
-                
-                <h3>Questions-3</h3>
-                <p>The writer structures the extract to create <strong>[primary effect]</strong>. At the beginning, the focus is on <strong>[opening situation]</strong>, using <strong>[initial technique]</strong>. This immediately engages the reader by <strong>[engagement method]</strong>. The focus then shifts to <strong>[developing situation]</strong>. This shift increases <strong>[intensified effect]</strong> and draws the reader in further. The ending is particularly effective, as <strong>[concluding moment]</strong>, which leaves the reader feeling <strong>[lasting impression]</strong>. These structural choices guide the reader through the text and build a sense of <strong>[cumulative effect]</strong>.</p>
+            <h3>Template:</h3>
+            <div class="template">
+<b>P:</b> The two texts show different [e.g., experiences of city life].
+<b>BP:</b> Text B presents it as [Text B's overall view].
+<b>AP:</b> However, Text A presents a different view, where the writer...
+
+<b>A-E-L 1:</b> In Text A, the writer says, <span class="quote">"QUOTE A1"</span>. This suggests... (Explain). Links to the question because...
+<b>A-E-L 2:</b> Another quote, <span class="quote">"QUOTE A2"</span>, shows... (Explain). Links because...
+<b>A-E-L 3:</b> The quote <span class="quote">"QUOTE A3"</span> implies... (Explain). Connects to the focus because...
+
+<span class="connective">Connective:</span> In contrast / On the other hand / Meanwhile
+
+<b>B-E-L 1:</b> In Text B, the writer says, <span class="quote">"QUOTE B1"</span>. This shows... (Explain). Links because...
+<b>B-E-L 2:</b> Another example is <span class="quote">"QUOTE B2"</span>, which implies... (Explain). Supports the idea that...
+<b>B-E-L 3:</b> Finally, <span class="quote">"QUOTE B3"</span> reveals... (Explain). Links back to the question because...
             </div>
         </section>
-
-        <section id="evaluation">
-            <h2>Evaluation</h2>
+        
+        <section id="q3">
+            <h2>✅ Q3: Language Analysis</h2>
+            <p><em>Analyze how writers create effects</em></p>
             
-            <div class="analysis-card">
-                <h3>Questions 4</h3>
-                <p>I strongly agree that the writer makes this part <strong>[key quality]</strong>. One way this is shown is through the use of <strong>[device]</strong> in the line <span class="quote">"[supporting quotation]"</span>. This effectively conveys <strong>[specific effect]</strong> and makes the reader feel <strong>[emotional response]</strong>. The writer also builds this effect through structure – for example, <strong>[structural technique]</strong>, which increases the impact. The use of <strong>[additional device]</strong> reinforces this atmosphere. Overall, the writer successfully <strong>[achievement]</strong> and leaves the reader feeling <strong>[final impression]</strong>.</p>
-                
-                <p>Furthermore, the writer makes this section <strong>[different quality]</strong>. One way this is shown is through the use of <strong>[alternative device]</strong> in the line <span class="quote">"[second quotation]"</span>. This effectively conveys <strong>[alternative effect]</strong> and makes the reader feel <strong>[different response]</strong>. The writer also builds this effect through structure – for example, <strong>[structural method]</strong>, which increases the impact. The use of <strong>[reinforcing technique]</strong> strengthens this atmosphere. Overall, the writer successfully <strong>[alternative achievement]</strong> and leaves the reader feeling <strong>[lasting effect]</strong>.</p>
-                
-                <p>Additionally, the writer makes this passage <strong>[third quality]</strong>. One way this is shown is through the use of <strong>[third device]</strong> in the line <span class="quote">"[third quotation]"</span>. This effectively conveys <strong>[third effect]</strong> and makes the reader feel <strong>[developed response]</strong>. The writer also builds this effect through structure – for example, <strong>[structural approach]</strong>, which increases the impact. The use of <strong>[complementary technique]</strong> enhances this atmosphere. Overall, the writer successfully <strong>[final achievement]</strong> and leaves the reader feeling <strong>[resonating impression]</strong>.</p>
+            <div class="structure">
+                <strong>Structure:</strong><br>
+                AP → R-T-E-Z-E-L (x3 paragraphs)
+            </div>
+            
+            <h3>Template:</h3>
+            <div class="template">
+<b>AP:</b> The writer presents [feeling/mood/atmosphere] in the text.
+
+<b>Paragraph 1:</b>
+- <b>R:</b> <span class="quote">"QUOTE 1"</span>
+- <b>T:</b> Uses <span class="technique">[technique]</span>
+- <b>E:</b> Creates <span class="effect">[effect]</span>
+- <b>Z:</b> Zooming in on <span class="quote">"WORD"</span> reveals...
+- <b>E:</b> Strengthens the message by...
+- <b>L:</b> Links to the question because...
+
+<span class="connective">Connective:</span> Furthermore / Additionally
+
+<b>Paragraph 2:</b>
+- <b>R:</b> <span class="quote">"QUOTE 2"</span>
+- <b>T:</b> Uses <span class="technique">[technique]</span>
+- <b>E:</b> Suggests...
+- <b>Z:</b> The phrase <span class="quote">"___"</span> emphasises...
+- <b>E:</b> Gives the impression that...
+- <b>L:</b> Connects to the focus as it shows...
+
+<span class="connective">Connective:</span> Finally / Moreover
+
+<b>Paragraph 3:</b>
+- <b>R:</b> <span class="quote">"QUOTE 3"</span>
+- <b>T:</b> <span class="technique">[Technique]</span> is used
+- <b>E:</b> The effect is...
+- <b>Z:</b> The word <span class="quote">"___"</span> is powerful because...
+- <b>E:</b> Helps the reader understand...
+- <b>L:</b> Relates to the question because...
             </div>
         </section>
-
-        <section id="language-devices">
-            <h2>Language Devices</h2>
-            <div class="devices-container">
-                <div class="device-card">
-                    <h3>Metaphor</h3>
-                    <p>Direct comparison (no "like" or "as")</p>
-                </div>
-                <div class="device-card">
-                    <h3>Simile</h3>
-                    <p>Comparison using "like" or "as"</p>
-                </div>
-                <div class="device-card">
-                    <h3>Personification</h3>
-                    <p>Giving human traits to non-human things</p>
-                </div>
-                <div class="device-card">
-                    <h3>Alliteration</h3>
-                    <p>Repetition of the same starting consonant</p>
-                </div>
-                <div class="device-card">
-                    <h3>Sibilance</h3>
-                    <p>Repetition of "s" or "sh" sounds for effect</p>
-                </div>
-                <div class="device-card">
-                    <h3>Juxtaposition</h3>
-                    <p>Placing two contrasting ideas side-by-side</p>
-                </div>
-                <div class="device-card">
-                    <h3>Oxymoron</h3>
-                    <p>Two contradictory words together</p>
-                </div>
-                <div class="device-card">
-                    <h3>Hyperbole</h3>
-                    <p>Exaggeration for emphasis</p>
-                </div>
-                <div class="device-card">
-                    <h3>Onomatopoeia</h3>
-                    <p>Words that imitate sound</p>
-                </div>
-                <div class="device-card">
-                    <h3>Triplet</h3>
-                    <p>Three ideas listed for impact</p>
-                </div>
-                <div class="device-card">
-                    <h3>Emotive Language</h3>
-                    <p>Words that stir strong feelings</p>
-                </div>
-                <div class="device-card">
-                    <h3>Pathetic Fallacy</h3>
-                    <p>Nature mirroring mood or events</p>
-                </div>
-                <div class="device-card">
-                    <h3>Irony</h3>
-                    <p>Saying the opposite of what is meant, or when the outcome is the opposite of what's expected</p>
-                </div>
-                <div class="device-card">
-                    <h3>Symbolism</h3>
-                    <p>A thing representing something else</p>
-                </div>
+        
+        <section id="q4">
+            <h2>✅ Q4: Compare Perspectives/Attitudes</h2>
+            <p><em>Compare writers' viewpoints and techniques</em></p>
+            
+            <div class="structure">
+                <strong>Structure:</strong><br>
+                AP-R-T-E → PB-R-T-E → Connective (Repeat x3)
             </div>
-        </section>
+            
+            <h3>Template:</h3>
+            <div class="template">
+<b>Paragraph 1:</b>
+- <b>AP:</b> In Text A, the writer presents [attitude/idea].
+- <b>R:</b> <span class="quote">"QUOTE A1"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Suggests...
+- <b>PB:</b> In Text B, the writer shows a [similar/different] idea.
+- <b>R:</b> <span class="quote">"QUOTE B1"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Implies...
 
-        <section id="structural-devices">
-            <h2>Structural Devices</h2>
-            <div class="devices-container">
-                <div class="device-card">
-                    <h3>Repetition</h3>
-                    <p>Repeating words</p>
-                </div>
-                <div class="device-card">
-                    <h3>Flashback / Flashforward</h3>
-                    <p>Interrupting the chronological order to show past/future events</p>
-                </div>
-                <div class="device-card">
-                    <h3>Foreshadowing</h3>
-                    <p>Hints about what's to come</p>
-                </div>
-                <div class="device-card">
-                    <h3>Zoom In / Zoom Out</h3>
-                    <p>Changes in focus — from macro to micro (or reverse)</p>
-                </div>
-                <div class="device-card">
-                    <h3>Circular Structure</h3>
-                    <p>Text begins and ends in the same or similar way</p>
-                </div>
-                <div class="device-card">
-                    <h3>Shift</h3>
-                    <p>Sudden change in tone, mood, or direction</p>
-                </div>
-                <div class="device-card">
-                    <h3>Withholding Information</h3>
-                    <p>Not telling the reader everything — builds mystery or suspense</p>
-                </div>
+<span class="connective">Connective:</span> However / Whereas
+
+<b>Paragraph 2:</b>
+- <b>AP:</b> Text A also presents [idea].
+- <b>R:</b> <span class="quote">"QUOTE A2"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Shows...
+- <b>PB:</b> In contrast, Text B says...
+- <b>R:</b> <span class="quote">"QUOTE B2"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Gives the impression that...
+
+<span class="connective">Connective:</span> Similarly / In addition
+
+<b>Paragraph 3:</b>
+- <b>AP:</b> Another attitude in Text A is...
+- <b>R:</b> <span class="quote">"QUOTE A3"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Highlights...
+- <b>PB:</b> Meanwhile, Text B shows...
+- <b>R:</b> <span class="quote">"QUOTE B3"</span>
+- <b>T:</b> <span class="technique">[Technique]</span>
+- <b>E:</b> Shows that...
             </div>
         </section>
     </div>
-
-    <footer>
-        <p>&copy; 2025</p>
-    </footer>
-
-    <script>
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-theme');
+        <section id="q5">
+            <h2>✅ Q5: Formal Letter Writing</h2>
+            <p><em>Structure and templates for persuasive letters</em></p>
             
-            if (document.body.classList.contains('light-theme')) {
-                themeToggle.textContent = 'Toggle Dark Mode';
-            } else {
-                themeToggle.textContent = 'Toggle Light Mode';
-            }
-        });
-    </script>
+            <div class="structure">
+                <strong>Format Reminder:</strong>
+                <ul>
+                    <li><s>Sender's address</s> (skip in exam)</li>
+                    <li><b>Recipient's name and title</b> (e.g. <span class="quote">Councillor Smith</span>)</li>
+                    <li><b>Date</b> (optional in exam)</li>
+                    <li><b>Greeting</b> (e.g. <span class="quote">Dear Councillor Smith,</span>)</li>
+                    <li><b>Intro paragraph</b></li>
+                    <li><b>Main argument paragraphs</b> (PEEL/PEAL structure)</li>
+                    <li><b>Closing paragraph</b></li>
+                    <li><b>Sign-off</b> (Yours sincerely / Yours faithfully)</li>
+                    <li><b>Your name</b> (e.g. <span class="signature">ShadowRoot17</span> <span class="emoji">😎</span>)</li>
+                </ul>
+            </div>
+            
+            <h3>🔥 Introduction Template</h3>
+            <div class="template">
+<b>Dear [Title + Surname],</b>
+
+I am writing to express my strong [support/opposition] regarding [insert topic, e.g. the plan to introduce AI surveillance in public areas]. As a young person who is deeply affected by this issue, I believe it is vital that voices like mine are taken seriously. Decisions like this will impact not just today's society, but the future we are all heading into — and I refuse to remain silent.
+
+Whether you realise it or not, this matter is already shaping the way we think, feel, and live. For this reason, I am urging you to [support/stop/change] this proposal before it causes lasting damage.
+            </div>
+            
+            <h3>🔥 Closing Paragraph Template</h3>
+            <div class="template">
+In conclusion, I hope you reflect on the real impact this decision will have on people like me. This is not just a political debate — it's personal. If we want to move forward as a society that values fairness, safety, and the future, then the right choices must be made today.
+
+I respectfully ask that you reconsider your position on [insert topic], and take the voices of young people seriously. We are not asking for favours — just for a future worth believing in.
+
+<b>Yours sincerely,</b>
+<span class="signature">[Your Name Here]</span>
+            </div>
+            
+            <h3 class="warning">⚠️ Extra Style Tips:</h3>
+            <div class="template">
+- Use <b>direct address</b> ("you", "your")
+- Keep the tone <b>formal but passionate</b>
+- Use <b>rhetorical questions</b>, <b>triples</b>, and <b>strong verbs</b>
+- Paragraphs should be structured like PEEL or PEAL
+- Show awareness of <b>audience</b> (the person in power) and <b>purpose</b> (to persuade)
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        &copy; 2023 English Language Analysis Guide | Dark Theme
+    </footer>
+    
+    <footer>
+        &copy; 2023 English Language Analysis Guide | Dark Theme
+    </footer>
 </body>
 </html>
